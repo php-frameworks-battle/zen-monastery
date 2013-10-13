@@ -1,8 +1,23 @@
 # Zen Monastery
 
-## Install
+## Setup
 
     php composer.phar create-project -sdev --repository-url="http://packages.zendframework.com" zendframework/skeleton-application path/to/install
+
+
+### Apache Configuration
+    <VirtualHost *:80>
+      ServerName zen-monastery.local
+      DocumentRoot /path-to-the-project?/public
+      SetEnv APPLICATION_ENV "development"
+      <Directory /path-to-the-project?/public>
+        DirectoryIndex index.php
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+      </Directory>
+    </VirtualHost>
+
 
 * `-sdev` is required because at the time of this writing the skeleton application is not stable. However this was not in the official documentation
 * vendor directory is not in .gitignore. only vendor/bin. Then you should explicitly add any new dependencies that you don't want in version control in vendor/.gitignore
