@@ -24,6 +24,8 @@
 * vendor directory is not in .gitignore. only vendor/bin. Then you should explicitly add any new dependencies that you don't want in version control in vendor/.gitignore
 * The tutorial encourages test driven development and has testing guidelines very early on. Good.
 * The tests written for the controller... lots of code. Not good.
+* Great Documentation
+* trouble setting up a form
 
 ZendSkeletonApplication
 =======================
