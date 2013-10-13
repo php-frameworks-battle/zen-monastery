@@ -8,11 +8,23 @@
                                 <div>
                                     <h2>Contact Form</h2>
 
-After fighting for over an hour to create a form reading through 
-http://framework.zend.com/manual/2.0/en/user-guide/forms-and-actions.html 
-and  http://framework.zend.com/manual/2.0/en/modules/zend.form.elements.html
-I couldn't manage to create a working version
-<br>
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url('battle', array('action' => 'contact')));
+$form->prepare();
+// $this->form()->openTag($form);
+// $this->formRow( $form->get('submit'));
+
+
+// echo $this->form()->openTag($form);
+// // echo $this->formHidden($form->get('id'));
+// // echo $this->formRow($form->get('title'));
+// // echo $this->formRow($form->get('artist'));
+// echo $this->formSubmit($form->get('submit'));
+// echo $this->form()->closeTag();
+
+echo $this->form()->render($form);
+?>
                                     <p class="subtitle">Donec leo, vivamus fermentum nibh in augue praesent a lacus</p>
                                 <a href="#"><img src="/images/pics03.jpg" alt=""></a>
                                 </div>
