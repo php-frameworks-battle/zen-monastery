@@ -18,10 +18,12 @@
       </Directory>
     </VirtualHost>
 
+### Notes
 
 * `-sdev` is required because at the time of this writing the skeleton application is not stable. However this was not in the official documentation
 * vendor directory is not in .gitignore. only vendor/bin. Then you should explicitly add any new dependencies that you don't want in version control in vendor/.gitignore
-
+* The tutorial encourages test driven development and has testing guidelines very early on. Good.
+* The tests written for the controller... lots of code. Not good.
 
 ZendSkeletonApplication
 =======================
