@@ -10,7 +10,7 @@ return array(
             'battle' => array(
                 'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/battle[/:action]',
+                    'route'    => '/[:action]',
                     'constraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                     ),
